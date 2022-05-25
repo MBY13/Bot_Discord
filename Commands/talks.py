@@ -1,3 +1,4 @@
+#Arquivo de conversa com o usuario
 from discord.ext import commands
 import discord
 

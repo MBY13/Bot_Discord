@@ -1,3 +1,4 @@
+# aqui colocamos reports com imagens e tudo mais para ter algo "Bonito" para o usuario
 from discord.ext import commands
 import discord
 

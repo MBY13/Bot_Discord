@@ -1,3 +1,4 @@
+#Cada reação retorna um cargo diferente para poder fazer autentificações
 from discord.ext import commands
 
 class Reactions(commands.Cog):

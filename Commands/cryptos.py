@@ -1,3 +1,4 @@
+#Aqui utilizamos uma api para fazer uma consulta de moedas
 from discord.ext import commands
 import requests
 

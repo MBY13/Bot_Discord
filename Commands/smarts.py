@@ -1,3 +1,4 @@
+#coisas inteligentes que o bot pode fazer
 from discord.ext import commands
 
 class Smarts(commands.Cog):

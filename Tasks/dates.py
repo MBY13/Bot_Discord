@@ -11,7 +11,7 @@ class Dates(commands.Cog):
     async def on_ready(self):
         self.current_time.start()
     
-    @tasks.loop(hours=1)#Loop fica ativo sempre de 10 em 10 segundos ele roda esse def
+    @tasks.loop(hours=1)#a cada 1h o bot manda uma mensagem de quando entrou no canal
     async def current_time(self):
         now = datetime.datetime.now()
 

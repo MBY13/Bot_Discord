@@ -1,2 +1,4 @@
 /.env
-**/__pycache__/*
+/__pycache__
+/Commands/__pycache__
+/Tasks/__pycache__

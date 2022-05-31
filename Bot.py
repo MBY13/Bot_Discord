@@ -1,5 +1,5 @@
 from discord.ext import commands
-from decouple import config
+# from decouple import config # comentato linha 16 para fazer o teste com variaveis ambiente no linux 
 import os
 
 bot = commands.Bot("!") # Definimos o que o usuario deve digitar pra chamar um evento no bot
@@ -13,5 +13,6 @@ def load_cogs(bot):#aqui temos um maneira de exercutar o codigo que esta nas pas
             bot.load_extension(f"Commands.{cog}")
 load_cogs(bot)
 
-TOKEN = config("TOKEN")
+# TOKEN = config("TOKEN")
+TOKEN = os.environ['TOKEN']
 bot.run(TOKEN) #URL do vinculo discord com o bot 

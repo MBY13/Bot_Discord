@@ -24,8 +24,8 @@ def load_cogs(bot):#aqui temos um maneira de exercutar o codigo que esta nas pas
     bot.load_extension("Commands.talks")
 load_cogs(bot)
 
-TOKEN = config("TOKEN")
-# TOKEN = os.environ['TOKEN']
+# TOKEN = config("TOKEN")
+TOKEN = os.environ['TOKEN']
 bot.run(TOKEN) #URL do vinculo discord com o bot 
 
-#!binance
+#!segredo

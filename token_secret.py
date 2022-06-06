@@ -59,7 +59,3 @@ def get_secret():
             decoded_binary_secret = base64.b64decode(get_secret_value_response['SecretBinary'])
     
     return secret
-
-            
-
-print(get_secret())

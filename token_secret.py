@@ -7,7 +7,6 @@ import boto3
 import base64
 from botocore.exceptions import ClientError
 
-
 def get_secret():
 
     secret_name = "arn:aws:secretsmanager:us-east-1:963121599153:secret:token-discord-DrqDKg"
@@ -18,12 +17,7 @@ def get_secret():
     client = session.client(
         service_name='secretsmanager',
         region_name=region_name
-
     )
-
-    # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
-    # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
-    # We rethrow the exception by default.
 
     try:
         get_secret_value_response = client.get_secret_value(
@@ -55,7 +49,7 @@ def get_secret():
         # Depending on whether the secret is a string or binary, one of these fields will be populated.
         if 'SecretString' in get_secret_value_response:
             secret = json.loads(get_secret_value_response['SecretString'])["TOKEN"]
+            return secret
         else:
             decoded_binary_secret = base64.b64decode(get_secret_value_response['SecretBinary'])
-    
-    return secret
+            return decoded_binary_secret

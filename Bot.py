@@ -1,6 +1,6 @@
 from discord.ext import commands
 from decouple import config # comentato linha 16 para fazer o teste com variaveis ambiente no linux 
-import os
+import token_secret
 
 bot = commands.Bot("!") # Definimos o que o usuario deve digitar pra chamar um evento no bot
 
@@ -25,7 +25,8 @@ def load_cogs(bot):#aqui temos um maneira de exercutar o codigo que esta nas pas
 load_cogs(bot)
 
 # TOKEN = config("TOKEN")
-TOKEN = os.environ['TOKEN']
+#TOKEN = os.environ['TOKEN']
+TOKEN = token_secret.get_secret()
 bot.run(TOKEN) #URL do vinculo discord com o bot 
 
 #!segredo

@@ -1,4 +1,5 @@
 /.env
-/__pycache__
-/Commands/__pycache__
+venv
+__pycache__/
+/Commands/__pycache__/
 /Tasks/__pycache__

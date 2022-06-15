@@ -9,7 +9,7 @@ from botocore.exceptions import ClientError
 
 def get_secret():
 
-    secret_name = "token-discord-bot"
+    secret_name = "arn:aws:secretsmanager:us-west-2:963121599153:secret:token-discord-bot-kZfRSJ"
     region_name = "us-east-1"
 
     # Create a Secrets Manager client
